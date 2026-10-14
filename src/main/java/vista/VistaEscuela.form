@@ -3,10 +3,11 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="Gestión Escuela - Profesores y Estudiantes"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -23,13 +24,424 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="tabPrincipal" alignment="0" pref="700" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Component id="tabPrincipal" alignment="0" pref="470" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="tabPrincipal">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+      <Container class="javax.swing.JPanel" name="pnlEstudiantes">
+        <Constraints>
+          <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraints">
+            <JTabbedPaneConstraints tabName="Estudiantes">
+              <Property name="tabTitle" type="java.lang.String" value="Estudiantes"/>
+            </JTabbedPaneConstraints>
+          </Constraint>
+        </Constraints>
+
+        <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="lblEstNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstCodigo" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstGrado" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="txtEstNombre" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstDireccion" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstTelefono" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstFecha" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstCodigo" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstGrado" alignment="0" pref="260" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnRegistrarEstudiante" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnLimpiarEstudiante" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstGrado" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstGrado" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnRegistrarEstudiante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLimpiarEstudiante" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+        </Layout>
+        <SubComponents>
+          <Component class="javax.swing.JLabel" name="lblEstNombre">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nombre:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstNombre">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstDireccion">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Dirección:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstDireccion">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstTelefono">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Teléfono:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstTelefono">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstFecha">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nacimiento (dd/mm/aaaa):"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstFecha">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstCodigo">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Código:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstCodigo">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstGrado">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Grado:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstGrado">
+          </Component>
+          <Component class="javax.swing.JButton" name="btnRegistrarEstudiante">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Registrar estudiante"/>
+            </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarEstudianteActionPerformed"/>
+            </Events>
+          </Component>
+          <Component class="javax.swing.JButton" name="btnLimpiarEstudiante">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Limpiar"/>
+            </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarEstudianteActionPerformed"/>
+            </Events>
+          </Component>
+        </SubComponents>
+      </Container>
+      <Container class="javax.swing.JPanel" name="pnlProfesores">
+        <Constraints>
+          <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraints">
+            <JTabbedPaneConstraints tabName="Profesores">
+              <Property name="tabTitle" type="java.lang.String" value="Profesores"/>
+            </JTabbedPaneConstraints>
+          </Constraint>
+        </Constraints>
+
+        <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="lblProfNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfCedula" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfArea" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfSalario" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfHoras" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="txtProfNombre" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfDireccion" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfTelefono" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfFecha" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfCedula" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfArea" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfSalario" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfHoras" alignment="0" pref="260" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnRegistrarProfesor" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnLimpiarProfesor" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfCedula" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfCedula" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfArea" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfArea" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfSalario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfSalario" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfHoras" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfHoras" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnRegistrarProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLimpiarProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+        </Layout>
+        <SubComponents>
+          <Component class="javax.swing.JLabel" name="lblProfNombre">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nombre:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfNombre">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfDireccion">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Dirección:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfDireccion">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfTelefono">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Teléfono:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfTelefono">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfFecha">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nacimiento (dd/mm/aaaa):"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfFecha">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfCedula">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Cédula:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfCedula">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfArea">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Área:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfArea">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfSalario">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Salario por hora ($):"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfSalario">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfHoras">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Horas dictadas en el mes:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfHoras">
+          </Component>
+          <Component class="javax.swing.JButton" name="btnRegistrarProfesor">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Registrar profesor"/>
+            </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarProfesorActionPerformed"/>
+            </Events>
+          </Component>
+          <Component class="javax.swing.JButton" name="btnLimpiarProfesor">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Limpiar"/>
+            </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarProfesorActionPerformed"/>
+            </Events>
+          </Component>
+        </SubComponents>
+      </Container>
+      <Container class="javax.swing.JPanel" name="pnlReportes">
+        <Constraints>
+          <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraints">
+            <JTabbedPaneConstraints tabName="Reportes">
+              <Property name="tabTitle" type="java.lang.String" value="Reportes"/>
+            </JTabbedPaneConstraints>
+          </Constraint>
+        </Constraints>
+
+        <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnReporteEstudiantes" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnReporteProfesores" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Component id="scrReporte" alignment="0" pref="660" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnReporteEstudiantes" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnReporteProfesores" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="scrReporte" pref="300" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+        </Layout>
+        <SubComponents>
+          <Component class="javax.swing.JButton" name="btnReporteEstudiantes">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Reporte de estudiantes"/>
+            </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteEstudiantesActionPerformed"/>
+            </Events>
+          </Component>
+          <Component class="javax.swing.JButton" name="btnReporteProfesores">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Reporte de profesores"/>
+            </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteProfesoresActionPerformed"/>
+            </Events>
+          </Component>
+          <Container class="javax.swing.JScrollPane" name="scrReporte">
+            <AuxValues>
+              <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+            </AuxValues>
+
+            <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+            <SubComponents>
+              <Component class="javax.swing.JTextArea" name="txtReporte">
+                <Properties>
+                  <Property name="editable" type="boolean" value="false"/>
+                  <Property name="columns" type="int" value="20"/>
+                  <Property name="lineWrap" type="boolean" value="true"/>
+                  <Property name="rows" type="int" value="5"/>
+                  <Property name="wrapStyleWord" type="boolean" value="true"/>
+                </Properties>
+              </Component>
+            </SubComponents>
+          </Container>
+        </SubComponents>
+      </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

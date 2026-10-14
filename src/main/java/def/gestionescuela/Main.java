@@ -4,13 +4,16 @@
 
 package def.gestionescuela;
 
+import vista.VistaEscuela;
+
 /**
  *
- * @author coffe
+ * @author Samuel Lopez
  */
 public class Main {
 
+    // abre la ventana
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        VistaEscuela.main(args);
     }
 }

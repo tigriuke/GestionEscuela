@@ -4,19 +4,30 @@
  */
 package vista;
 
+import controlador.ControladorEscuela;
+
 /**
  *
- * @author coffe
+ * @author Samuel Lopez
  */
 public class VistaEscuela extends javax.swing.JFrame {
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(VistaEscuela.class.getName());
+
+    // la vista solo usa al controlador
+    private ControladorEscuela controlador = new ControladorEscuela();
 
     /**
      * Creates new form VistaEscuela
      */
     public VistaEscuela() {
         initComponents();
+    }
+
+    public ControladorEscuela getControlador() {
+        return controlador;
+    }
+
+    public void setControlador(ControladorEscuela controlador) {
+        this.controlador = controlador;
     }
 
     /**
@@ -28,47 +39,393 @@ public class VistaEscuela extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        tabPrincipal = new javax.swing.JTabbedPane();
+        pnlEstudiantes = new javax.swing.JPanel();
+        lblEstNombre = new javax.swing.JLabel();
+        txtEstNombre = new javax.swing.JTextField();
+        lblEstDireccion = new javax.swing.JLabel();
+        txtEstDireccion = new javax.swing.JTextField();
+        lblEstTelefono = new javax.swing.JLabel();
+        txtEstTelefono = new javax.swing.JTextField();
+        lblEstFecha = new javax.swing.JLabel();
+        txtEstFecha = new javax.swing.JTextField();
+        lblEstCodigo = new javax.swing.JLabel();
+        txtEstCodigo = new javax.swing.JTextField();
+        lblEstGrado = new javax.swing.JLabel();
+        txtEstGrado = new javax.swing.JTextField();
+        btnRegistrarEstudiante = new javax.swing.JButton();
+        btnLimpiarEstudiante = new javax.swing.JButton();
+        pnlProfesores = new javax.swing.JPanel();
+        lblProfNombre = new javax.swing.JLabel();
+        txtProfNombre = new javax.swing.JTextField();
+        lblProfDireccion = new javax.swing.JLabel();
+        txtProfDireccion = new javax.swing.JTextField();
+        lblProfTelefono = new javax.swing.JLabel();
+        txtProfTelefono = new javax.swing.JTextField();
+        lblProfFecha = new javax.swing.JLabel();
+        txtProfFecha = new javax.swing.JTextField();
+        lblProfCedula = new javax.swing.JLabel();
+        txtProfCedula = new javax.swing.JTextField();
+        lblProfArea = new javax.swing.JLabel();
+        txtProfArea = new javax.swing.JTextField();
+        lblProfSalario = new javax.swing.JLabel();
+        txtProfSalario = new javax.swing.JTextField();
+        lblProfHoras = new javax.swing.JLabel();
+        txtProfHoras = new javax.swing.JTextField();
+        btnRegistrarProfesor = new javax.swing.JButton();
+        btnLimpiarProfesor = new javax.swing.JButton();
+        pnlReportes = new javax.swing.JPanel();
+        btnReporteEstudiantes = new javax.swing.JButton();
+        btnReporteProfesores = new javax.swing.JButton();
+        scrReporte = new javax.swing.JScrollPane();
+        txtReporte = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Gestión Escuela - Profesores y Estudiantes");
+
+        lblEstNombre.setText("Nombre:");
+        lblEstDireccion.setText("Dirección:");
+        lblEstTelefono.setText("Teléfono:");
+        lblEstFecha.setText("Nacimiento (dd/mm/aaaa):");
+        lblEstCodigo.setText("Código:");
+        lblEstGrado.setText("Grado:");
+        lblProfNombre.setText("Nombre:");
+        lblProfDireccion.setText("Dirección:");
+        lblProfTelefono.setText("Teléfono:");
+        lblProfFecha.setText("Nacimiento (dd/mm/aaaa):");
+        lblProfCedula.setText("Cédula:");
+        lblProfArea.setText("Área:");
+        lblProfSalario.setText("Salario por hora ($):");
+        lblProfHoras.setText("Horas dictadas en el mes:");
+        btnRegistrarEstudiante.setText("Registrar estudiante");
+        btnRegistrarEstudiante.addActionListener(this::btnRegistrarEstudianteActionPerformed);
+        btnLimpiarEstudiante.setText("Limpiar");
+        btnLimpiarEstudiante.addActionListener(this::btnLimpiarEstudianteActionPerformed);
+        btnRegistrarProfesor.setText("Registrar profesor");
+        btnRegistrarProfesor.addActionListener(this::btnRegistrarProfesorActionPerformed);
+        btnLimpiarProfesor.setText("Limpiar");
+        btnLimpiarProfesor.addActionListener(this::btnLimpiarProfesorActionPerformed);
+        btnReporteEstudiantes.setText("Reporte de estudiantes");
+        btnReporteEstudiantes.addActionListener(this::btnReporteEstudiantesActionPerformed);
+        btnReporteProfesores.setText("Reporte de profesores");
+        btnReporteProfesores.addActionListener(this::btnReporteProfesoresActionPerformed);
+        txtReporte.setEditable(false);
+        txtReporte.setColumns(20);
+
+        txtReporte.setLineWrap(true);
+        txtReporte.setRows(5);
+        txtReporte.setWrapStyleWord(true);
+        scrReporte.setViewportView(txtReporte);
+
+        javax.swing.GroupLayout pnlEstudiantesLayout = new javax.swing.GroupLayout(pnlEstudiantes);
+        pnlEstudiantes.setLayout(pnlEstudiantesLayout);
+        pnlEstudiantesLayout.setHorizontalGroup(
+            pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                        .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEstNombre)
+                            .addComponent(lblEstDireccion)
+                            .addComponent(lblEstTelefono)
+                            .addComponent(lblEstFecha)
+                            .addComponent(lblEstCodigo)
+                            .addComponent(lblEstGrado))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEstNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstGrado, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)))
+                    .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                        .addComponent(btnRegistrarEstudiante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpiarEstudiante)))
+                .addContainerGap())
+        );
+        pnlEstudiantesLayout.setVerticalGroup(
+            pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstNombre)
+                    .addComponent(txtEstNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstDireccion)
+                    .addComponent(txtEstDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstTelefono)
+                    .addComponent(txtEstTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstFecha)
+                    .addComponent(txtEstFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstCodigo)
+                    .addComponent(txtEstCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstGrado)
+                    .addComponent(txtEstGrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarEstudiante)
+                    .addComponent(btnLimpiarEstudiante))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabPrincipal.addTab("Estudiantes", pnlEstudiantes);
+
+        javax.swing.GroupLayout pnlProfesoresLayout = new javax.swing.GroupLayout(pnlProfesores);
+        pnlProfesores.setLayout(pnlProfesoresLayout);
+        pnlProfesoresLayout.setHorizontalGroup(
+            pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                        .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblProfNombre)
+                            .addComponent(lblProfDireccion)
+                            .addComponent(lblProfTelefono)
+                            .addComponent(lblProfFecha)
+                            .addComponent(lblProfCedula)
+                            .addComponent(lblProfArea)
+                            .addComponent(lblProfSalario)
+                            .addComponent(lblProfHoras))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtProfNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfCedula, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfArea, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfSalario, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfHoras, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)))
+                    .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                        .addComponent(btnRegistrarProfesor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpiarProfesor)))
+                .addContainerGap())
+        );
+        pnlProfesoresLayout.setVerticalGroup(
+            pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfNombre)
+                    .addComponent(txtProfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfDireccion)
+                    .addComponent(txtProfDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfTelefono)
+                    .addComponent(txtProfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfFecha)
+                    .addComponent(txtProfFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfCedula)
+                    .addComponent(txtProfCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfArea)
+                    .addComponent(txtProfArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfSalario)
+                    .addComponent(txtProfSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfHoras)
+                    .addComponent(txtProfHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarProfesor)
+                    .addComponent(btnLimpiarProfesor))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabPrincipal.addTab("Profesores", pnlProfesores);
+
+        javax.swing.GroupLayout pnlReportesLayout = new javax.swing.GroupLayout(pnlReportes);
+        pnlReportes.setLayout(pnlReportesLayout);
+        pnlReportesLayout.setHorizontalGroup(
+            pnlReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReportesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlReportesLayout.createSequentialGroup()
+                        .addComponent(btnReporteEstudiantes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnReporteProfesores)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(scrReporte, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnlReportesLayout.setVerticalGroup(
+            pnlReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReportesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlReportesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReporteEstudiantes)
+                    .addComponent(btnReporteProfesores))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrReporte, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tabPrincipal.addTab("Reportes", pnlReportes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(tabPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(tabPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, 470, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegistrarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEstudianteActionPerformed
+        registrarEstudiante();
+    }//GEN-LAST:event_btnRegistrarEstudianteActionPerformed
+
+    private void btnLimpiarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEstudianteActionPerformed
+        limpiarCamposEstudiante();
+    }//GEN-LAST:event_btnLimpiarEstudianteActionPerformed
+
+    private void btnRegistrarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarProfesorActionPerformed
+        registrarProfesor();
+    }//GEN-LAST:event_btnRegistrarProfesorActionPerformed
+
+    private void btnLimpiarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarProfesorActionPerformed
+        limpiarCamposProfesor();
+    }//GEN-LAST:event_btnLimpiarProfesorActionPerformed
+
+    private void btnReporteEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteEstudiantesActionPerformed
+        mostrarReporte(controlador.generarReporteEstudiantes());
+    }//GEN-LAST:event_btnReporteEstudiantesActionPerformed
+
+    private void btnReporteProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteProfesoresActionPerformed
+        mostrarReporte(controlador.generarReporteProfesores());
+    }//GEN-LAST:event_btnReporteProfesoresActionPerformed
+
+    // llama al controlador y muestra el resultado
+    private void registrarEstudiante() {
+        String mensaje = controlador.registrarEstudiante(txtEstNombre.getText(), txtEstDireccion.getText(),
+                txtEstTelefono.getText(), txtEstFecha.getText(), txtEstCodigo.getText(), txtEstGrado.getText());
+        if (mensaje.equals("")) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Estudiante registrado correctamente.");
+            limpiarCamposEstudiante();
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, mensaje, "Datos no válidos", javax.swing.JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void registrarProfesor() {
+        String mensaje = controlador.registrarProfesor(txtProfNombre.getText(), txtProfDireccion.getText(),
+                txtProfTelefono.getText(), txtProfFecha.getText(), txtProfCedula.getText(),
+                txtProfArea.getText(), txtProfSalario.getText(), txtProfHoras.getText());
+        if (mensaje.equals("")) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Profesor registrado correctamente.");
+            limpiarCamposProfesor();
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, mensaje, "Datos no válidos", javax.swing.JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void limpiarCamposEstudiante() {
+        txtEstNombre.setText("");
+        txtEstDireccion.setText("");
+        txtEstTelefono.setText("");
+        txtEstFecha.setText("");
+        txtEstCodigo.setText("");
+        txtEstGrado.setText("");
+    }
+
+    private void limpiarCamposProfesor() {
+        txtProfNombre.setText("");
+        txtProfDireccion.setText("");
+        txtProfTelefono.setText("");
+        txtProfFecha.setText("");
+        txtProfCedula.setText("");
+        txtProfArea.setText("");
+        txtProfSalario.setText("");
+        txtProfHoras.setText("");
+    }
+
+    // muestra el reporte en el área de texto y en la consola
+    private void mostrarReporte(String reporte) {
+        txtReporte.setText(reporte);
+        txtReporte.setCaretPosition(0);
+        System.out.println(reporte);
+    }
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new VistaEscuela().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLimpiarEstudiante;
+    private javax.swing.JButton btnLimpiarProfesor;
+    private javax.swing.JButton btnRegistrarEstudiante;
+    private javax.swing.JButton btnRegistrarProfesor;
+    private javax.swing.JButton btnReporteEstudiantes;
+    private javax.swing.JButton btnReporteProfesores;
+    private javax.swing.JLabel lblEstCodigo;
+    private javax.swing.JLabel lblEstDireccion;
+    private javax.swing.JLabel lblEstFecha;
+    private javax.swing.JLabel lblEstGrado;
+    private javax.swing.JLabel lblEstNombre;
+    private javax.swing.JLabel lblEstTelefono;
+    private javax.swing.JLabel lblProfArea;
+    private javax.swing.JLabel lblProfCedula;
+    private javax.swing.JLabel lblProfDireccion;
+    private javax.swing.JLabel lblProfFecha;
+    private javax.swing.JLabel lblProfHoras;
+    private javax.swing.JLabel lblProfNombre;
+    private javax.swing.JLabel lblProfSalario;
+    private javax.swing.JLabel lblProfTelefono;
+    private javax.swing.JPanel pnlEstudiantes;
+    private javax.swing.JPanel pnlProfesores;
+    private javax.swing.JPanel pnlReportes;
+    private javax.swing.JScrollPane scrReporte;
+    private javax.swing.JTabbedPane tabPrincipal;
+    private javax.swing.JTextArea txtReporte;
+    private javax.swing.JTextField txtEstCodigo;
+    private javax.swing.JTextField txtEstDireccion;
+    private javax.swing.JTextField txtEstFecha;
+    private javax.swing.JTextField txtEstGrado;
+    private javax.swing.JTextField txtEstNombre;
+    private javax.swing.JTextField txtEstTelefono;
+    private javax.swing.JTextField txtProfArea;
+    private javax.swing.JTextField txtProfCedula;
+    private javax.swing.JTextField txtProfDireccion;
+    private javax.swing.JTextField txtProfFecha;
+    private javax.swing.JTextField txtProfHoras;
+    private javax.swing.JTextField txtProfNombre;
+    private javax.swing.JTextField txtProfSalario;
+    private javax.swing.JTextField txtProfTelefono;
     // End of variables declaration//GEN-END:variables
 }
