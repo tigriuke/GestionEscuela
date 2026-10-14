@@ -42,6 +42,25 @@ public class VistaEscuela extends javax.swing.JFrame {
         txtEstGrado = new javax.swing.JTextField();
         btnRegistrarEstudiante = new javax.swing.JButton();
         btnLimpiarEstudiante = new javax.swing.JButton();
+        pnlProfesores = new javax.swing.JPanel();
+        lblProfNombre = new javax.swing.JLabel();
+        txtProfNombre = new javax.swing.JTextField();
+        lblProfDireccion = new javax.swing.JLabel();
+        txtProfDireccion = new javax.swing.JTextField();
+        lblProfTelefono = new javax.swing.JLabel();
+        txtProfTelefono = new javax.swing.JTextField();
+        lblProfFecha = new javax.swing.JLabel();
+        txtProfFecha = new javax.swing.JTextField();
+        lblProfCedula = new javax.swing.JLabel();
+        txtProfCedula = new javax.swing.JTextField();
+        lblProfArea = new javax.swing.JLabel();
+        txtProfArea = new javax.swing.JTextField();
+        lblProfSalario = new javax.swing.JLabel();
+        txtProfSalario = new javax.swing.JTextField();
+        lblProfHoras = new javax.swing.JLabel();
+        txtProfHoras = new javax.swing.JTextField();
+        btnRegistrarProfesor = new javax.swing.JButton();
+        btnLimpiarProfesor = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestión Escuela - Profesores y Estudiantes");
@@ -52,8 +71,18 @@ public class VistaEscuela extends javax.swing.JFrame {
         lblEstFecha.setText("Nacimiento (dd/mm/aaaa):");
         lblEstCodigo.setText("Código:");
         lblEstGrado.setText("Grado:");
+        lblProfNombre.setText("Nombre:");
+        lblProfDireccion.setText("Dirección:");
+        lblProfTelefono.setText("Teléfono:");
+        lblProfFecha.setText("Nacimiento (dd/mm/aaaa):");
+        lblProfCedula.setText("Cédula:");
+        lblProfArea.setText("Área:");
+        lblProfSalario.setText("Salario por hora ($):");
+        lblProfHoras.setText("Horas dictadas en el mes:");
         btnRegistrarEstudiante.setText("Registrar estudiante");
         btnLimpiarEstudiante.setText("Limpiar");
+        btnRegistrarProfesor.setText("Registrar profesor");
+        btnLimpiarProfesor.setText("Limpiar");
 
         javax.swing.GroupLayout pnlEstudiantesLayout = new javax.swing.GroupLayout(pnlEstudiantes);
         pnlEstudiantes.setLayout(pnlEstudiantesLayout);
@@ -120,6 +149,83 @@ public class VistaEscuela extends javax.swing.JFrame {
 
         tabPrincipal.addTab("Estudiantes", pnlEstudiantes);
 
+        javax.swing.GroupLayout pnlProfesoresLayout = new javax.swing.GroupLayout(pnlProfesores);
+        pnlProfesores.setLayout(pnlProfesoresLayout);
+        pnlProfesoresLayout.setHorizontalGroup(
+            pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                        .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblProfNombre)
+                            .addComponent(lblProfDireccion)
+                            .addComponent(lblProfTelefono)
+                            .addComponent(lblProfFecha)
+                            .addComponent(lblProfCedula)
+                            .addComponent(lblProfArea)
+                            .addComponent(lblProfSalario)
+                            .addComponent(lblProfHoras))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtProfNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfCedula, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfArea, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfSalario, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtProfHoras, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)))
+                    .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                        .addComponent(btnRegistrarProfesor)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpiarProfesor)))
+                .addContainerGap())
+        );
+        pnlProfesoresLayout.setVerticalGroup(
+            pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlProfesoresLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfNombre)
+                    .addComponent(txtProfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfDireccion)
+                    .addComponent(txtProfDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfTelefono)
+                    .addComponent(txtProfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfFecha)
+                    .addComponent(txtProfFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfCedula)
+                    .addComponent(txtProfCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfArea)
+                    .addComponent(txtProfArea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfSalario)
+                    .addComponent(txtProfSalario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblProfHoras)
+                    .addComponent(txtProfHoras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlProfesoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarProfesor)
+                    .addComponent(btnLimpiarProfesor))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabPrincipal.addTab("Profesores", pnlProfesores);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -145,14 +251,25 @@ public class VistaEscuela extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLimpiarEstudiante;
+    private javax.swing.JButton btnLimpiarProfesor;
     private javax.swing.JButton btnRegistrarEstudiante;
+    private javax.swing.JButton btnRegistrarProfesor;
     private javax.swing.JLabel lblEstCodigo;
     private javax.swing.JLabel lblEstDireccion;
     private javax.swing.JLabel lblEstFecha;
     private javax.swing.JLabel lblEstGrado;
     private javax.swing.JLabel lblEstNombre;
     private javax.swing.JLabel lblEstTelefono;
+    private javax.swing.JLabel lblProfArea;
+    private javax.swing.JLabel lblProfCedula;
+    private javax.swing.JLabel lblProfDireccion;
+    private javax.swing.JLabel lblProfFecha;
+    private javax.swing.JLabel lblProfHoras;
+    private javax.swing.JLabel lblProfNombre;
+    private javax.swing.JLabel lblProfSalario;
+    private javax.swing.JLabel lblProfTelefono;
     private javax.swing.JPanel pnlEstudiantes;
+    private javax.swing.JPanel pnlProfesores;
     private javax.swing.JTabbedPane tabPrincipal;
     private javax.swing.JTextField txtEstCodigo;
     private javax.swing.JTextField txtEstDireccion;
@@ -160,5 +277,13 @@ public class VistaEscuela extends javax.swing.JFrame {
     private javax.swing.JTextField txtEstGrado;
     private javax.swing.JTextField txtEstNombre;
     private javax.swing.JTextField txtEstTelefono;
+    private javax.swing.JTextField txtProfArea;
+    private javax.swing.JTextField txtProfCedula;
+    private javax.swing.JTextField txtProfDireccion;
+    private javax.swing.JTextField txtProfFecha;
+    private javax.swing.JTextField txtProfHoras;
+    private javax.swing.JTextField txtProfNombre;
+    private javax.swing.JTextField txtProfSalario;
+    private javax.swing.JTextField txtProfTelefono;
     // End of variables declaration//GEN-END:variables
 }

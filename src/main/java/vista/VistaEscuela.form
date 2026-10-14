@@ -180,6 +180,176 @@
           </Component>
         </SubComponents>
       </Container>
+      <Container class="javax.swing.JPanel" name="pnlProfesores">
+        <Constraints>
+          <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraints">
+            <JTabbedPaneConstraints tabName="Profesores">
+              <Property name="tabTitle" type="java.lang.String" value="Profesores"/>
+            </JTabbedPaneConstraints>
+          </Constraint>
+        </Constraints>
+
+        <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="lblProfNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfCedula" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfArea" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfSalario" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblProfHoras" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="txtProfNombre" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfDireccion" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfTelefono" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfFecha" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfCedula" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfArea" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfSalario" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtProfHoras" alignment="0" pref="260" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnRegistrarProfesor" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnLimpiarProfesor" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfCedula" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfCedula" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfArea" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfArea" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfSalario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfSalario" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblProfHoras" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtProfHoras" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnRegistrarProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLimpiarProfesor" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+        </Layout>
+        <SubComponents>
+          <Component class="javax.swing.JLabel" name="lblProfNombre">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nombre:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfNombre">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfDireccion">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Dirección:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfDireccion">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfTelefono">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Teléfono:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfTelefono">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfFecha">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nacimiento (dd/mm/aaaa):"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfFecha">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfCedula">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Cédula:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfCedula">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfArea">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Área:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfArea">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfSalario">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Salario por hora ($):"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfSalario">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblProfHoras">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Horas dictadas en el mes:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtProfHoras">
+          </Component>
+          <Component class="javax.swing.JButton" name="btnRegistrarProfesor">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Registrar profesor"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JButton" name="btnLimpiarProfesor">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Limpiar"/>
+            </Properties>
+          </Component>
+        </SubComponents>
+      </Container>
       </SubComponents>
     </Container>
   </SubComponents>
