@@ -73,6 +73,44 @@ public class ControladorEscuela {
         return "";
     }
 
+    // registra un profesor; devuelve "" si salió bien o el mensaje de error
+    public String registrarProfesor(String nombre, String direccion, String telefono,
+            String fechaNacimiento, String cedula, String area, String salarioPorHora, String horasDictadas) {
+        if (estaVacio(nombre) || estaVacio(direccion) || estaVacio(telefono)
+                || estaVacio(fechaNacimiento) || estaVacio(cedula) || estaVacio(area)
+                || estaVacio(salarioPorHora) || estaVacio(horasDictadas)) {
+            return "Todos los campos son obligatorios.";
+        }
+        LocalDate fecha = convertirFecha(fechaNacimiento);
+        if (fecha == null) {
+            return "La fecha debe ser válida y tener el formato dd/mm/aaaa.";
+        }
+        if (fecha.isAfter(LocalDate.now())) {
+            return "La fecha de nacimiento no puede ser futura.";
+        }
+        if (!esNumero(salarioPorHora) || !esNumero(horasDictadas)) {
+            return "El salario por hora y las horas deben ser números enteros.";
+        }
+        int salario = Integer.parseInt(salarioPorHora.trim());
+        int horas = Integer.parseInt(horasDictadas.trim());
+        if (salario == 0) {
+            return "El salario por hora debe ser mayor que 0.";
+        }
+        Profesor profesor = new Profesor(cedula.trim(), area.trim(), salario, horas);
+        profesor.setNombre(nombre.trim());
+        profesor.setDireccion(direccion.trim());
+        profesor.setTelefono(telefono.trim());
+        profesor.setFechaNacimiento(fecha);
+        if (!profesor.esMayorDeEdad()) {
+            return "El profesor debe ser mayor de edad.";
+        }
+        if (existeProfesor(cedula.trim())) {
+            return "Ya existe un profesor con esa cédula.";
+        }
+        profesores.add(profesor);
+        return "";
+    }
+
     // convierte "dd/mm/aaaa" en fecha; devuelve null si no es válida
     private LocalDate convertirFecha(String texto) {
         try {
