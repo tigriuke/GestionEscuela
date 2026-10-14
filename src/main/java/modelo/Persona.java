@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 /**
  *
- * @author coffe
+ * @author Samuel Lopez
  */
 public class Persona {
 

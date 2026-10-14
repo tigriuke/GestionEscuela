@@ -6,7 +6,7 @@ package vista;
 
 /**
  *
- * @author coffe
+ * @author Samuel Lopez
  */
 public class VistaEscuela extends javax.swing.JFrame {
     

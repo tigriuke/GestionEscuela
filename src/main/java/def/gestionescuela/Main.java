@@ -6,7 +6,7 @@ package def.gestionescuela;
 
 /**
  *
- * @author coffe
+ * @author Samuel Lopez
  */
 public class Main {
 

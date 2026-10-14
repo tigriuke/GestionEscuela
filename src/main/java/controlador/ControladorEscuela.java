@@ -10,11 +10,12 @@ import java.time.format.DateTimeParseException;
 import java.time.format.ResolverStyle;
 import java.util.ArrayList;
 import modelo.Estudiante;
+import modelo.Persona;
 import modelo.Profesor;
 
 /**
  *
- * @author coffe
+ * @author Samuel Lopez
  */
 public class ControladorEscuela {
 
@@ -109,6 +110,59 @@ public class ControladorEscuela {
         }
         profesores.add(profesor);
         return "";
+    }
+
+    // reporte 1: lista de estudiantes
+    public String generarReporteEstudiantes() {
+        String reporte = "REPORTE DE ESTUDIANTES\n";
+        reporte = reporte + "--------------------------------------------------\n";
+        if (estudiantes.size() == 0) {
+            reporte = reporte + "No hay estudiantes registrados.\n";
+            return reporte;
+        }
+        for (int i = 0; i < estudiantes.size(); i++) {
+            reporte = reporte + formatearLinea(i + 1, estudiantes.get(i)) + "\n";
+        }
+        reporte = reporte + "--------------------------------------------------\n";
+        reporte = reporte + "Total de estudiantes: " + estudiantes.size() + "\n";
+        return reporte;
+    }
+
+    // reporte 2: profesores de mayor a menor pago total, con sus prestaciones
+    public String generarReporteProfesores() {
+        String reporte = "REPORTE DE PROFESORES (de mayor a menor pago total)\n";
+        reporte = reporte + "--------------------------------------------------\n";
+        if (profesores.size() == 0) {
+            reporte = reporte + "No hay profesores registrados.\n";
+            return reporte;
+        }
+        ordenarProfesores();
+        double totalPrestaciones = 0;
+        for (int i = 0; i < profesores.size(); i++) {
+            reporte = reporte + formatearLinea(i + 1, profesores.get(i)) + "\n";
+            totalPrestaciones = totalPrestaciones + profesores.get(i).calcularPrestaciones();
+        }
+        reporte = reporte + "--------------------------------------------------\n";
+        reporte = reporte + "TOTAL PRESTACIONES SOCIALES: $" + String.format("%.2f", totalPrestaciones) + "\n";
+        return reporte;
+    }
+
+    // ordena los profesores de mayor a menor pago total (método de la burbuja)
+    private void ordenarProfesores() {
+        for (int i = 0; i < profesores.size() - 1; i++) {
+            for (int j = 0; j < profesores.size() - 1 - i; j++) {
+                if (profesores.get(j).calcularPagoTotal() < profesores.get(j + 1).calcularPagoTotal()) {
+                    Profesor auxiliar = profesores.get(j);
+                    profesores.set(j, profesores.get(j + 1));
+                    profesores.set(j + 1, auxiliar);
+                }
+            }
+        }
+    }
+
+    // recibe una Persona: usa la descripción del estudiante o del profesor (polimorfismo)
+    private String formatearLinea(int posicion, Persona persona) {
+        return posicion + ". " + persona.obtenerDescripcion();
     }
 
     // convierte "dd/mm/aaaa" en fecha; devuelve null si no es válida
