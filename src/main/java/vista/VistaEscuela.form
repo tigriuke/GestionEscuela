@@ -172,11 +172,17 @@
             <Properties>
               <Property name="text" type="java.lang.String" value="Registrar estudiante"/>
             </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarEstudianteActionPerformed"/>
+            </Events>
           </Component>
           <Component class="javax.swing.JButton" name="btnLimpiarEstudiante">
             <Properties>
               <Property name="text" type="java.lang.String" value="Limpiar"/>
             </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarEstudianteActionPerformed"/>
+            </Events>
           </Component>
         </SubComponents>
       </Container>
@@ -342,11 +348,17 @@
             <Properties>
               <Property name="text" type="java.lang.String" value="Registrar profesor"/>
             </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegistrarProfesorActionPerformed"/>
+            </Events>
           </Component>
           <Component class="javax.swing.JButton" name="btnLimpiarProfesor">
             <Properties>
               <Property name="text" type="java.lang.String" value="Limpiar"/>
             </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLimpiarProfesorActionPerformed"/>
+            </Events>
           </Component>
         </SubComponents>
       </Container>
@@ -397,11 +409,17 @@
             <Properties>
               <Property name="text" type="java.lang.String" value="Reporte de estudiantes"/>
             </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteEstudiantesActionPerformed"/>
+            </Events>
           </Component>
           <Component class="javax.swing.JButton" name="btnReporteProfesores">
             <Properties>
               <Property name="text" type="java.lang.String" value="Reporte de profesores"/>
             </Properties>
+            <Events>
+              <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReporteProfesoresActionPerformed"/>
+            </Events>
           </Component>
           <Container class="javax.swing.JScrollPane" name="scrReporte">
             <AuxValues>

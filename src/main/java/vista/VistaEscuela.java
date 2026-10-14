@@ -4,17 +4,30 @@
  */
 package vista;
 
+import controlador.ControladorEscuela;
+
 /**
  *
  * @author Samuel Lopez
  */
 public class VistaEscuela extends javax.swing.JFrame {
 
+    // la vista solo usa al controlador
+    private ControladorEscuela controlador = new ControladorEscuela();
+
     /**
      * Creates new form VistaEscuela
      */
     public VistaEscuela() {
         initComponents();
+    }
+
+    public ControladorEscuela getControlador() {
+        return controlador;
+    }
+
+    public void setControlador(ControladorEscuela controlador) {
+        this.controlador = controlador;
     }
 
     /**
@@ -85,11 +98,17 @@ public class VistaEscuela extends javax.swing.JFrame {
         lblProfSalario.setText("Salario por hora ($):");
         lblProfHoras.setText("Horas dictadas en el mes:");
         btnRegistrarEstudiante.setText("Registrar estudiante");
+        btnRegistrarEstudiante.addActionListener(this::btnRegistrarEstudianteActionPerformed);
         btnLimpiarEstudiante.setText("Limpiar");
+        btnLimpiarEstudiante.addActionListener(this::btnLimpiarEstudianteActionPerformed);
         btnRegistrarProfesor.setText("Registrar profesor");
+        btnRegistrarProfesor.addActionListener(this::btnRegistrarProfesorActionPerformed);
         btnLimpiarProfesor.setText("Limpiar");
+        btnLimpiarProfesor.addActionListener(this::btnLimpiarProfesorActionPerformed);
         btnReporteEstudiantes.setText("Reporte de estudiantes");
+        btnReporteEstudiantes.addActionListener(this::btnReporteEstudiantesActionPerformed);
         btnReporteProfesores.setText("Reporte de profesores");
+        btnReporteProfesores.addActionListener(this::btnReporteProfesoresActionPerformed);
         txtReporte.setEditable(false);
         txtReporte.setColumns(20);
 
@@ -283,6 +302,81 @@ public class VistaEscuela extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegistrarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarEstudianteActionPerformed
+        registrarEstudiante();
+    }//GEN-LAST:event_btnRegistrarEstudianteActionPerformed
+
+    private void btnLimpiarEstudianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarEstudianteActionPerformed
+        limpiarCamposEstudiante();
+    }//GEN-LAST:event_btnLimpiarEstudianteActionPerformed
+
+    private void btnRegistrarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarProfesorActionPerformed
+        registrarProfesor();
+    }//GEN-LAST:event_btnRegistrarProfesorActionPerformed
+
+    private void btnLimpiarProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarProfesorActionPerformed
+        limpiarCamposProfesor();
+    }//GEN-LAST:event_btnLimpiarProfesorActionPerformed
+
+    private void btnReporteEstudiantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteEstudiantesActionPerformed
+        mostrarReporte(controlador.generarReporteEstudiantes());
+    }//GEN-LAST:event_btnReporteEstudiantesActionPerformed
+
+    private void btnReporteProfesoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteProfesoresActionPerformed
+        mostrarReporte(controlador.generarReporteProfesores());
+    }//GEN-LAST:event_btnReporteProfesoresActionPerformed
+
+    // llama al controlador y muestra el resultado
+    private void registrarEstudiante() {
+        String mensaje = controlador.registrarEstudiante(txtEstNombre.getText(), txtEstDireccion.getText(),
+                txtEstTelefono.getText(), txtEstFecha.getText(), txtEstCodigo.getText(), txtEstGrado.getText());
+        if (mensaje.equals("")) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Estudiante registrado correctamente.");
+            limpiarCamposEstudiante();
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, mensaje, "Datos no válidos", javax.swing.JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void registrarProfesor() {
+        String mensaje = controlador.registrarProfesor(txtProfNombre.getText(), txtProfDireccion.getText(),
+                txtProfTelefono.getText(), txtProfFecha.getText(), txtProfCedula.getText(),
+                txtProfArea.getText(), txtProfSalario.getText(), txtProfHoras.getText());
+        if (mensaje.equals("")) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Profesor registrado correctamente.");
+            limpiarCamposProfesor();
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, mensaje, "Datos no válidos", javax.swing.JOptionPane.WARNING_MESSAGE);
+        }
+    }
+
+    private void limpiarCamposEstudiante() {
+        txtEstNombre.setText("");
+        txtEstDireccion.setText("");
+        txtEstTelefono.setText("");
+        txtEstFecha.setText("");
+        txtEstCodigo.setText("");
+        txtEstGrado.setText("");
+    }
+
+    private void limpiarCamposProfesor() {
+        txtProfNombre.setText("");
+        txtProfDireccion.setText("");
+        txtProfTelefono.setText("");
+        txtProfFecha.setText("");
+        txtProfCedula.setText("");
+        txtProfArea.setText("");
+        txtProfSalario.setText("");
+        txtProfHoras.setText("");
+    }
+
+    // muestra el reporte en el área de texto y en la consola
+    private void mostrarReporte(String reporte) {
+        txtReporte.setText(reporte);
+        txtReporte.setCaretPosition(0);
+        System.out.println(reporte);
+    }
 
     /**
      * @param args the command line arguments
