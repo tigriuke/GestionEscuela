@@ -54,4 +54,30 @@ public class Profesor extends Persona {
     public void setHorasDictadas(int horasDictadas) {
         this.horasDictadas = horasDictadas;
     }
+
+    // sobrecarga 1: pago del mes con las horas dictadas
+    public double calcularPagoTotal() {
+        return calcularPagoTotal(horasDictadas);
+    }
+
+    // sobrecarga 2: pago para unas horas dadas (más 30% por preparación)
+    public double calcularPagoTotal(int horas) {
+        double pagoBase = salarioPorHora * horas;
+        return pagoBase + pagoBase * 0.30;
+    }
+
+    // prestaciones: 19% del pago total
+    public double calcularPrestaciones() {
+        return calcularPagoTotal() * 0.19;
+    }
+
+    // sobreescribe el método de Persona
+    @Override
+    public String obtenerDescripcion() {
+        return super.obtenerDescripcion()
+                + "\n     Cédula: " + cedula + " | Área: " + area
+                + "\n     Horas: " + horasDictadas
+                + " | Pago total: $" + String.format("%.2f", calcularPagoTotal())
+                + " | Prestaciones (19%): $" + String.format("%.2f", calcularPrestaciones());
+    }
 }
