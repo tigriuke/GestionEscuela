@@ -37,6 +37,150 @@
     <Container class="javax.swing.JTabbedPane" name="tabPrincipal">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+      <Container class="javax.swing.JPanel" name="pnlEstudiantes">
+        <Constraints>
+          <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraints">
+            <JTabbedPaneConstraints tabName="Estudiantes">
+              <Property name="tabTitle" type="java.lang.String" value="Estudiantes"/>
+            </JTabbedPaneConstraints>
+          </Constraint>
+        </Constraints>
+
+        <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="lblEstNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstDireccion" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstTelefono" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstCodigo" alignment="0" min="-2" max="-2" attributes="0"/>
+                    <Component id="lblEstGrado" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                    <Component id="txtEstNombre" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstDireccion" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstTelefono" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstFecha" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstCodigo" alignment="0" pref="260" max="32767" attributes="0"/>
+                    <Component id="txtEstGrado" alignment="0" pref="260" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnRegistrarEstudiante" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnLimpiarEstudiante" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstDireccion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstTelefono" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="lblEstGrado" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtEstGrado" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnRegistrarEstudiante" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnLimpiarEstudiante" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+        </Layout>
+        <SubComponents>
+          <Component class="javax.swing.JLabel" name="lblEstNombre">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nombre:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstNombre">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstDireccion">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Dirección:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstDireccion">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstTelefono">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Teléfono:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstTelefono">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstFecha">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Nacimiento (dd/mm/aaaa):"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstFecha">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstCodigo">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Código:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstCodigo">
+          </Component>
+          <Component class="javax.swing.JLabel" name="lblEstGrado">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Grado:"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JTextField" name="txtEstGrado">
+          </Component>
+          <Component class="javax.swing.JButton" name="btnRegistrarEstudiante">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Registrar estudiante"/>
+            </Properties>
+          </Component>
+          <Component class="javax.swing.JButton" name="btnLimpiarEstudiante">
+            <Properties>
+              <Property name="text" type="java.lang.String" value="Limpiar"/>
+            </Properties>
+          </Component>
+        </SubComponents>
+      </Container>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>

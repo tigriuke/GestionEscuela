@@ -27,9 +27,98 @@ public class VistaEscuela extends javax.swing.JFrame {
     private void initComponents() {
 
         tabPrincipal = new javax.swing.JTabbedPane();
+        pnlEstudiantes = new javax.swing.JPanel();
+        lblEstNombre = new javax.swing.JLabel();
+        txtEstNombre = new javax.swing.JTextField();
+        lblEstDireccion = new javax.swing.JLabel();
+        txtEstDireccion = new javax.swing.JTextField();
+        lblEstTelefono = new javax.swing.JLabel();
+        txtEstTelefono = new javax.swing.JTextField();
+        lblEstFecha = new javax.swing.JLabel();
+        txtEstFecha = new javax.swing.JTextField();
+        lblEstCodigo = new javax.swing.JLabel();
+        txtEstCodigo = new javax.swing.JTextField();
+        lblEstGrado = new javax.swing.JLabel();
+        txtEstGrado = new javax.swing.JTextField();
+        btnRegistrarEstudiante = new javax.swing.JButton();
+        btnLimpiarEstudiante = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gestión Escuela - Profesores y Estudiantes");
+
+        lblEstNombre.setText("Nombre:");
+        lblEstDireccion.setText("Dirección:");
+        lblEstTelefono.setText("Teléfono:");
+        lblEstFecha.setText("Nacimiento (dd/mm/aaaa):");
+        lblEstCodigo.setText("Código:");
+        lblEstGrado.setText("Grado:");
+        btnRegistrarEstudiante.setText("Registrar estudiante");
+        btnLimpiarEstudiante.setText("Limpiar");
+
+        javax.swing.GroupLayout pnlEstudiantesLayout = new javax.swing.GroupLayout(pnlEstudiantes);
+        pnlEstudiantes.setLayout(pnlEstudiantesLayout);
+        pnlEstudiantesLayout.setHorizontalGroup(
+            pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                        .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEstNombre)
+                            .addComponent(lblEstDireccion)
+                            .addComponent(lblEstTelefono)
+                            .addComponent(lblEstFecha)
+                            .addComponent(lblEstCodigo)
+                            .addComponent(lblEstGrado))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtEstNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstFecha, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+                            .addComponent(txtEstGrado, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)))
+                    .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                        .addComponent(btnRegistrarEstudiante)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnLimpiarEstudiante)))
+                .addContainerGap())
+        );
+        pnlEstudiantesLayout.setVerticalGroup(
+            pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstudiantesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstNombre)
+                    .addComponent(txtEstNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstDireccion)
+                    .addComponent(txtEstDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstTelefono)
+                    .addComponent(txtEstTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstFecha)
+                    .addComponent(txtEstFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstCodigo)
+                    .addComponent(txtEstCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblEstGrado)
+                    .addComponent(txtEstGrado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlEstudiantesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegistrarEstudiante)
+                    .addComponent(btnLimpiarEstudiante))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        tabPrincipal.addTab("Estudiantes", pnlEstudiantes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,6 +144,21 @@ public class VistaEscuela extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLimpiarEstudiante;
+    private javax.swing.JButton btnRegistrarEstudiante;
+    private javax.swing.JLabel lblEstCodigo;
+    private javax.swing.JLabel lblEstDireccion;
+    private javax.swing.JLabel lblEstFecha;
+    private javax.swing.JLabel lblEstGrado;
+    private javax.swing.JLabel lblEstNombre;
+    private javax.swing.JLabel lblEstTelefono;
+    private javax.swing.JPanel pnlEstudiantes;
     private javax.swing.JTabbedPane tabPrincipal;
+    private javax.swing.JTextField txtEstCodigo;
+    private javax.swing.JTextField txtEstDireccion;
+    private javax.swing.JTextField txtEstFecha;
+    private javax.swing.JTextField txtEstGrado;
+    private javax.swing.JTextField txtEstNombre;
+    private javax.swing.JTextField txtEstTelefono;
     // End of variables declaration//GEN-END:variables
 }
