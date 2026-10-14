@@ -45,6 +45,34 @@ public class ControladorEscuela {
         this.profesores = profesores;
     }
 
+    // registra un estudiante; devuelve "" si salió bien o el mensaje de error
+    public String registrarEstudiante(String nombre, String direccion, String telefono,
+            String fechaNacimiento, String codigo, String grado) {
+        if (estaVacio(nombre) || estaVacio(direccion) || estaVacio(telefono)
+                || estaVacio(fechaNacimiento) || estaVacio(codigo) || estaVacio(grado)) {
+            return "Todos los campos son obligatorios.";
+        }
+        LocalDate fecha = convertirFecha(fechaNacimiento);
+        if (fecha == null) {
+            return "La fecha debe ser válida y tener el formato dd/mm/aaaa.";
+        }
+        if (fecha.isAfter(LocalDate.now())) {
+            return "La fecha de nacimiento no puede ser futura.";
+        }
+        if (existeEstudiante(codigo.trim())) {
+            return "Ya existe un estudiante con ese código.";
+        }
+        Estudiante estudiante = new Estudiante();
+        estudiante.setNombre(nombre.trim());
+        estudiante.setDireccion(direccion.trim());
+        estudiante.setTelefono(telefono.trim());
+        estudiante.setFechaNacimiento(fecha);
+        estudiante.setCodigo(codigo.trim());
+        estudiante.setGrado(grado.trim());
+        estudiantes.add(estudiante);
+        return "";
+    }
+
     // convierte "dd/mm/aaaa" en fecha; devuelve null si no es válida
     private LocalDate convertirFecha(String texto) {
         try {
