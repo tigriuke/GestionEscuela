@@ -5,6 +5,8 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 /**
  *
@@ -51,5 +53,37 @@ public class Persona {
 
     public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    // edad en años cumplidos al día de hoy
+    public int calcularEdad() {
+        return calcularEdad(LocalDate.now());
+    }
+
+    // edad en años cumplidos a una fecha dada (sobrecarga)
+    public int calcularEdad(LocalDate fechaReferencia) {
+        if (fechaNacimiento == null || fechaReferencia == null) {
+            return 0;
+        }
+        int anios = Period.between(fechaNacimiento, fechaReferencia).getYears();
+        if (anios < 0) {
+            return 0;
+        }
+        return anios;
+    }
+
+    // true si tiene 18 años o más
+    public boolean esMayorDeEdad() {
+        return calcularEdad() >= 18;
+    }
+
+    // datos de la persona en un texto (las subclases lo sobreescriben)
+    public String obtenerDescripcion() {
+        String fecha = "-";
+        if (fechaNacimiento != null) {
+            fecha = fechaNacimiento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        }
+        return "Nombre: " + nombre + " | Dirección: " + direccion + " | Tel: " + telefono
+                + " | Nacimiento: " + fecha + " (" + calcularEdad() + " años)";
     }
 }
