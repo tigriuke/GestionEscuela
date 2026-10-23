@@ -75,5 +75,61 @@ public class PersonaTest {
         
         assertEquals("Nombre: null | Dirección: null | Tel: null | Nacimiento: - (0 años)", p.obtenerDescripcion());
     }
+    
+    @Test
+    public void personaSettersYGetters(){
+        Persona p = new Persona();
+        p.setNombre("Ana");
+        p.setDireccion("Calle 1");
+        p.setTelefono("3001234567");
+
+        assertEquals("Ana", p.getNombre());
+        assertEquals("Calle 1", p.getDireccion());
+        assertEquals("3001234567", p.getTelefono());
+    }
+
+    @Test
+    public void personaCalcularEdadRespetaCumpleanos(){
+        Persona p = new Persona();
+        p.setFechaNacimiento(LocalDate.of(2000, 6, 15));
+
+        //el dia antes del cumpleanos todavia tiene 24 años
+        assertEquals(24, p.calcularEdad(LocalDate.of(2025, 6, 14)));
+        //el dia del cumpleanos ya tiene 25
+        assertEquals(25, p.calcularEdad(LocalDate.of(2025, 6, 15)));
+    }
+
+    @Test
+    public void personaCalcularEdadReferenciaAntesDelNacimiento(){
+        Persona p = new Persona();
+        p.setFechaNacimiento(LocalDate.of(2200, 12, 15));
+
+        //la referencia es anterior al nacimiento, por eso retorna 0
+        assertEquals(0, p.calcularEdad(LocalDate.of(2020, 1, 1)));
+    }
+
+    @Test
+    public void personaEsMayorDeEdadSiTiene18OMas(){
+        Persona p = new Persona();
+        p.setFechaNacimiento(LocalDate.now().minusYears(18));
+
+        assertTrue(p.esMayorDeEdad());
+    }
+
+    @Test
+    public void personaObtenerDescripcionConDatos(){
+        Persona p = new Persona();
+        p.setNombre("Ana");
+        p.setDireccion("Calle 1");
+        p.setTelefono("3001234567");
+        p.setFechaNacimiento(LocalDate.of(2000, 6, 15));
+
+        String descripcion = p.obtenerDescripcion();
+        
+        assertTrue(descripcion.contains("Nombre: Ana"));
+        assertTrue(descripcion.contains("Dirección: Calle 1"));
+        assertTrue(descripcion.contains("Tel: 3001234567"));
+        assertTrue(descripcion.contains("Nacimiento: 15/06/2000"));
+    }
 }
 
